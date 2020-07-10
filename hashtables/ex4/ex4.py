@@ -1,8 +1,24 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    pos = []
+    cache = {}
+    result = []
+    
+    for num in a:
+        if num > 0:
+            pos.append(num)
+        else:
+            cache[-num] = -num
+            
+    for i in pos:
+        if i in cache:
+            result.append(i)
+            
+    return result
+    
+    
+
+
+
 
     return result
 
